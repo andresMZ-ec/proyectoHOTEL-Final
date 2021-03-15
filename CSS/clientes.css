@@ -1,0 +1,311 @@
+.container_main{
+    padding: 30px 60px;
+}
+
+.search_cl{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 50px;
+    padding: 5px 0;
+}
+.search_cl .buscador>input{
+    padding: 5px 7px;
+    width: 225px;
+    border: 2px solid #252525;    
+}
+    .search_cl .buscador>input::placeholder{
+        color: var(--color-principal-hover);
+        text-align: center;
+    }
+.search_cl .buscador>a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-text);
+    background-color: var(--color-azul);
+    padding: 5px 15px;  
+    border: 1.5px solid var(--color-azul);     
+    margin-left: -5px;
+}
+
+.data_cl{
+    padding: 10px 0;
+    overflow: auto;
+    display: flex;
+}   
+    .data_cl::-webkit-scrollbar{
+        -webkit-appearance: none;
+        height: 9px;
+    }
+    .data_cl::-webkit-scrollbar-button{
+        display: none;
+    }
+    .data_cl::-webkit-scrollbar-thumb{
+        background-color: rgba(48, 48, 48, 0.563);
+        border-radius: 20px;
+        height: 3px;
+        margin: 0;
+    }
+.table_cliente .thead, .row_cli:hover{
+    background-color: var(--color-azul-h);
+    display: flex;
+}
+.table_cliente .thead, .row_cli{
+    display: flex;    
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--color-azul);
+}
+    .table_cliente .tbody{
+        font-size: 13px;
+    }
+    .table_cliente .thead{
+        background-color: var(--color-azul);
+        color: var(--color-text);
+        font-size: 11px;
+        padding: 5px 0;        
+    }
+    .row_cli>p{
+        margin: 10px 0;
+    }
+        .row_cli .botones{
+            min-width: 100px;
+            max-width: 100px;
+        }
+        .type-doc{
+            min-width: 80px;
+            max-width: 80px;
+        }
+        .num_id{
+            min-width: 90px;
+            max-width: 90px;
+            
+        }
+        .names_cli{
+            min-width: 175px;
+            max-width: 175px;
+            overflow: hidden;
+        }
+        .mail_cli{
+            min-width: 200px;
+            max-width: 200px;
+            overflow: hidden;
+        }
+        .cell_cli{
+            min-width: 120px;
+            max-width: 120px;
+        }
+        .estado_out{
+            min-width: 90px;
+            max-width: 90px;
+            font-weight: bold;
+        }
+            .estado_out.pagado{
+                color: var(--color-verde-admin);                                
+            }
+            .estado_out.nopagado{
+                color: #a30a0a;              
+            }
+            .estado_out.porpagar{
+                color: #018dff;              
+            }
+        .table_cliente .tbody .row_cli .botones{
+            width: 125px;
+        }
+        .table_cliente .tbody .row_cli a>i{
+            margin-right: 10px;
+        }
+        .btn_edit_cli, .btn_dlt_cli{
+            text-decoration: none;
+            background-color: var(--color-mostaza-admin);
+            color: var(--color-principal-admin);
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 5px;   
+            font-size: 13px;         
+        }
+        .btn_dlt_cli{
+            background-color: #a30a0a;
+            color: var(--color-text);
+        }
+
+
+
+/*
+            VENTANA DE AGREGAR UN NUEVO CLIENTE
+*/
+.overlay_vent .window-add-cl{
+    background-color: var(--color-text); 
+    width: 50%; 
+}
+.window-add-cl .h_form{
+    background-color: #00917c;
+}
+.window-add-cl .f-add-cli{
+    padding: 15px 30px; 
+}
+.window-add-cl .f-add-cli .row{
+    display: flex;
+}
+.window-add-cl .f-add-cli .row>.column{
+    width: 50%;
+}
+
+.f-add-cli form .row .column>input{
+    padding: 5px;
+    border: 2px solid #00917c;
+    display: block;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.f-add-cli form .row .column>label{
+    font-size: 15px;
+    font-weight: bold;
+    color: #025955;
+}
+.f-add-cli form .row .column>input::placeholder{
+    color: #025955;
+}
+form .btn_accion{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+form .btn_accion>.btn_cancelar{
+    padding: 7px 30px;
+    background-color: var(--color-text);
+    color: var(--color-verde-admin);
+    border: 2px solid var(--color-verde-admin);
+}
+form .btn_accion .btn_agregar,.btn_cancelar{
+    padding: 7px 50px;
+    background-color: var(--color-verde-admin);
+    color: var(--color-text);
+    border-radius: 20px;
+    text-decoration: none;        
+}
+
+
+.f-add-cli .botones_accionados{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px 25px 40px;
+}
+.f-add-cli .botones_accionados>a{
+    text-decoration: none;
+    padding: 3px 30px;
+    background-color: var(--color-text);
+    color: #00917c;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid #00917c;
+    transition: ease all .5s;
+}
+.f-add-cli .botones_accionados>.btn_add_employ{
+    background-color: #00917c;
+    color: #ffff;
+}
+.f-add-cli .botones_accionados>.btn_add_employ:hover{
+    letter-spacing: 2px;
+}
+.f-add-cli .botones_accionados>.btn_volver:hover{
+    letter-spacing: 3px;
+    background-color: #75cfb8;
+}
+
+
+/*
+            VENTANA DE AGREGAR UN NUEVO CLIENTE
+*/
+.overlay_vent .window-edit-cl{
+    background-color: var(--color-text); 
+    width: 50%; 
+}
+.window-edit-cl .h_form{
+    background-color: var(--edit-cliente1);
+}
+.window-edit-cl .f-edit-cli{
+    padding: 15px 30px; 
+}
+.window-edit-cl .f-edit-cli .row{
+    display: flex;
+}
+.window-edit-cl .f-edit-cli .row>.column{
+    width: 50%;
+}
+
+.f-edit-cli form .row .column>input{
+    padding: 5px;
+    border: 2px solid var(--edit-cliente1);
+    color: var(--edit-cliente2);
+    display: block;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.f-edit-cli form .row .column>label{
+    font-size: 15px;
+    font-weight: bold;
+    color: #025955;
+}
+.f-edit-cli form .row .column>input::placeholder{
+    color: #025955;
+}
+
+.f-edit-cli .botones_accionados{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px 25px 40px;
+}
+.f-edit-cli .botones_accionados>a{
+    text-decoration: none;
+    padding: 3px 30px;
+    background-color: var(--color-text);
+    color: #00917c;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid #00917c;
+    transition: ease all .5s;
+}
+.f-edit-cli .botones_accionados>.btn_add_employ{
+    background-color: #00917c;
+    color: #ffff;
+}
+.f-edit-cli .botones_accionados>.btn_add_employ:hover{
+    letter-spacing: 2px;
+    background-color: var(--edit-cliente1);
+    border: var(--edit-cliente1);
+}
+.f-edit-cli .botones_accionados>.btn_volver:hover{
+    letter-spacing: 3px;
+    color: var(--color-text);
+    background-color: #75cfb8;
+}
+
+
+
+
+
+
+/* VENTANA DE INSERTAR COMPLETE */
+
+
+
+
+
+
+
+/*MEDIA QUERYS*/
+@media(max-width: 500px){
+    .main_admin .container_main{
+        padding: 30px 35px;
+    }
+    .container_contenido .botones_bd{
+        padding-bottom: 5px;
+    }
+    .container_contenido .botones_bd a>i{
+        margin-right: 10px;
+    }
+}

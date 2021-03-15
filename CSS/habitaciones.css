@@ -1,0 +1,466 @@
+/*
+    MAIN-habitaciones
+*/
+.main_admin{
+    margin-left: 260px;
+}
+.contenido_main{
+    padding: 30px 60px;
+}
+.container_contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.botones_bd a>i{
+    padding-right: 10px;
+}
+.botones_bd>a{
+    background-color: #147a01;
+    color: var(--color-text);
+    padding: 5px 20px;
+    text-decoration: none;
+    border: none;
+    font-size: 13px;
+    border-radius: 12px;
+    margin-left: 15px;    
+}
+    .botones_bd .btn_add{
+        background-color: #1e8c03;
+    }
+    .botones_bd .btn_edit{
+        background-color: #ffce00;
+        color: var(--color-principal-admin);
+    }
+    .botones_bd .btn_delete{
+        background-color: #a30a0a;
+    }
+
+.header_main .title_apar{
+    color: var(--color-verde-admin);
+    font-size: 35px;
+    margin: 0;
+}
+
+.niveles{
+    display: flex;  
+    align-items: center;
+    padding: 10px 20px;
+}
+    .niveles>h3{
+        margin: 0;
+    }
+    .niveles .number_nivel{
+        color: var(--color-verde-admin);
+        text-decoration: none;
+        padding: 3px 7px;
+        margin-left: 15px;
+        font-weight: bold;
+        border: 2px solid var(--color-verde-admin);
+    }
+    .niveles .number_nivel.active{
+        color: var(--color-text);
+        cursor: default;
+        background-color: var(--color-verde-admin);
+    }
+.hab_box{
+    display: flex;    
+    flex-wrap: wrap;
+}   
+    .box{      
+        background-color: var(--color-verde-admin); 
+        overflow: hidden;
+        position: relative; 
+        width: 300px;     
+        color: var(--color-text);
+        margin: 5px 10px;
+        text-decoration: none;
+    }
+        .box .process_hab{
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #28df99;
+            color: var(--color-principal-admin);
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translateY(100%);
+            cursor: pointer;
+            transition: transform .5s ease-in-out .3s;
+        }
+            .box:hover .process_hab{
+                transform: translateY(0%);
+            }
+        /*cuando cambie de estado*/
+        .box.disponible{
+            background-color: #1e8c03;        
+        }
+        .est_hab.disponible{
+            background-color: #186d00;        
+        }
+
+        .box.ocupado{
+            background-color: #a30a0a;        
+        }
+        .est_hab.ocupado{
+            background-color: #7a0c0c;        
+        }
+
+        .box.limpieza{
+            background-color: #06a1ef;        
+        }
+        .est_hab.limpieza{
+            background-color: #0780ed;        
+        }
+
+        .box.reservado{
+            background-color: #f88f01;        
+        }
+        .est_hab.reservado{
+            background-color: #e27802;        
+        }
+
+    .descrip_box{
+        display: flex;
+        width: 280px;
+        margin: auto;
+        font-family: 'Rubik', sans-serif;
+        justify-content: space-between;
+    }
+    .descrip_box .text_hab{
+        padding: 10px;
+    }
+        .text_hab h1,h3,h5{
+            margin: 0;
+        }
+        .text_hab>h1{
+            font-size: 60px;                        
+        }
+        .text_hab>h3{
+            font-size: 16px;
+            font-weight: bolder;
+        }
+        .text_hab .cant_huesp{
+            font-size: 13px;
+            padding-top: 5px;
+        }
+    .photo{
+        padding: 15px; 
+        /*padding: 10px 0;  -> para check out*/
+        display: flex;
+        align-items: center;     
+    }
+        .photo>img{
+            width: 125px;           
+            margin: auto;
+        }
+    .est_hab{
+        text-align: center;
+        padding: 5px 0;
+        font-weight: bold;
+        background-color: var(--color-verde-admin);
+    }
+
+
+
+
+/*
+    VENTANA DE AGREGAR NUEVA HABITACION
+*/
+.overlay_vent{
+    background-color: rgba(66, 66, 66, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;    
+}
+    .overlay_vent.active{
+        visibility: visible;
+    }
+.overlay_vent .window_add{
+    position: absolute;
+    width: 50%;
+    background-color: var(--color-text);     
+}
+    .h_form{
+        display:  flex;
+        justify-content: space-between;
+        background-color: var(--color-verde-admin);
+        color: var(--color-text);
+        padding: 10px 30px;
+        align-items: center;
+    }
+        .h_form>a{
+            color: var(--color-text);
+            font-size: 25px;
+            text-decoration: none;
+        }
+    .form_add{
+        padding: 15px 30px;        
+    }
+    .form_add .row{
+        display: flex;
+    }
+    .form_add .row>.column{
+        width: 50%;
+    }
+    
+    .form_add form .row .column>label{
+        font-size: 15px;
+        font-weight: bold;
+        color: var(--color-principal-hover);
+    }
+    .form_add form .row .column>input::placeholder{
+        color: var(--caja-verde-bajo);
+    }
+    .form_add form .row .column>input:not(.images_hab), select{
+        border: 2px solid var(--color-verde-admin);
+        border-radius: 5px;
+        padding: 7px 10px; 
+        width: 80%;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #desc_hab::placeholder{
+        color: var(--caja-verde-bajo);
+        font-family: Arial;
+    }
+    #desc_hab{
+        max-width: 280px;
+        max-height: 150px;
+        border: 2px solid var(--color-verde-admin);
+        border-radius: 5px;
+        padding: 7px 10px;
+    }
+
+    form .btn_accion{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    form .btn_accion>.btn_cancelar{
+        padding: 7px 30px;
+        background-color: var(--color-text);
+        color: var(--color-verde-admin);
+        border: 2px solid var(--color-verde-admin);
+    }
+    form .btn_accion .btn_agregar,.btn_cancelar{
+        padding: 7px 50px;
+        background-color: var(--color-verde-admin);
+        color: var(--color-text);
+        border-radius: 20px;
+        text-decoration: none;        
+    }
+
+
+
+/*
+    VENTANA DE EDITAR UNA HABITACION
+*/
+@media (min-height: 650px){
+    .overlay_vent{    
+        overflow-y: scroll;
+    }
+}
+    .window_edit .h_form{
+        display:  flex;
+        justify-content: space-between;
+        background-color: var(--color-mostaza-admin);
+        color: var(--color-principal-admin);
+        padding: 10px 30px;
+        align-items: center;
+    }
+        .window_edit .h_form>a{
+            color: var(--color-principal-admin);
+            font-size: 25px;
+            text-decoration: none;
+        }
+
+    .window_edit .form_edit{
+        padding: 15px 30px;  
+        background-color: var(--color-text);      
+    }
+    .form_edit .selection_hab{
+        text-align: center;
+    }
+        .form_edit form .s_habt>select{
+            width: 100%;    
+            border: 2px solid var(--color-mostaza-admin);
+        }
+        .form_edit form .hab_seleccionado{
+            background-color: var(--color-mostaza-admin);
+            border: none;        
+            padding: 7px 40px;
+            border-radius: 15px;
+            margin: 5px 0;
+        }
+    .hab_detect{
+        padding: 20px 0;
+        width: 500px;
+    }
+        .hab_detect fieldset{
+            border: 2px solid var(--color-mostaza-admin);
+            padding: 5px 20px 10px 20px;
+        }
+        .hab_detect fieldset p:not(.no_center){
+            display: flex;
+            font-size: 15px;
+            align-items: center;           
+            justify-content: space-between;
+            margin: 0;
+        }
+            .hab_detect fieldset p>input[type="file"]{
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+            }
+            label[for="hab_images"] {
+                font-size: 12px;
+                font-weight: 600;
+                color: #fff;
+                background-color: var(--color-principal-admin);
+                display: inline-block;
+                transition: all .5s;
+                cursor: pointer;
+                padding: 10px 30px !important;                
+                width: fit-content;
+                text-align: center;
+            }
+        .hab_detect fieldset p>input, textarea:not(.descrip_prod){
+            min-width: 250px;
+            padding: 7px 10px;
+            flex-wrap: wrap;
+            border: 2px solid var(--color-mostaza-admin);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .hab_detect fieldset p>textarea{
+            width: 425px;
+            height: 70px;
+            max-width: 425px;
+            max-height: 70px;
+        }
+        .hab_detect fieldset p>select{
+            border: 2px solid var(--color-mostaza-admin);
+        }
+        .hab_detect .btn_edit_complete{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hab_detect .btn_edit_complete>a{
+            text-decoration: none;
+            padding: 7px 30px;
+            background-color: var(--color-mostaza-admin);
+            color: var(--color-principal-admin);
+            border-radius: 25px;
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .hab_detect .btn_edit_complete>a:hover{
+            background-color: #147a01;
+            color: var(--color-text);
+        }
+        .hab_detect .btn_edit_complete .btn_cancel_edit{
+            border-color: var(--color-principal-admin);
+            background-color: var(--color-text);
+            border: 2px solid var(--color-principal-admin);
+        }
+        .hab_detect .btn_edit_complete .btn_cancel_edit:hover{
+            border: none;
+            background-color: #a30a0a;
+            color: var(--color-text);
+        }
+
+/*
+    VENTANA PARA ELIMINAR UNA HABITACION
+*/
+.window_delete .h_form{
+    display:  flex;
+    justify-content: space-between;
+    background-color: #a30a0a;
+    color: var(--color-text);
+    padding: 10px 30px;
+    align-items: center;
+    font-size: 14px;
+}
+    .window_delete .h_form>a{
+        color: var(--color-text);
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+.window_delete .form_delete{
+    padding: 15px 30px;  
+    background-color: var(--color-text);      
+}
+.form_delete .selection_hab{
+    text-align: center;
+}
+    .form_delete form .s_habt>label{
+        font-size: 14px;
+    }
+    .form_delete form .s_habt>select{
+        width: 100%;    
+        border: 2px solid #a30a0a;
+    }
+    .form_delete form .hab_seleccionado{
+        background-color: #a30a0a;
+        color: var(--color-text);
+        border: none;        
+        padding: 7px 40px;
+        border-radius: 15px;
+        margin: 5px 0;
+    }
+
+
+
+
+
+
+/*RESPONSIVIDAD*/
+@media (max-width: 1024px){
+    .contenido_main{
+        padding: 30px 35px;
+    }
+}
+@media (max-width: 830px){
+    .container_contenido{
+        display: block;
+    }
+    .container_contenido .botones_bd{
+        text-align: end;
+        padding: 25px 0;
+    }
+    
+}
+@media (max-width: 580px){
+    .botones_bd a>span{
+        display: none;
+    }
+    .botones_bd a>i{
+        padding: 0;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .botones_bd a{
+        padding: 10px 12px;
+        border-radius: 30px;
+    }
+}

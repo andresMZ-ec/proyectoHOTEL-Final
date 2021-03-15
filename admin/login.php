@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Campiña</title>
+    <script src="https://kit.fontawesome.com/34cf304f66.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../images/mz-andres.png">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="cont-login">
+            <div class="box-login">
+                <div class="box_header">
+                    <div class="logo-company"><img src="../images/campiña-logo.png" alt=""></div>                    
+                </div>
+                <div class="formulario-login">
+                    <div class="form-header-lg">
+                        <h2>Sistema La Campiña</h2>
+                    </div>
+                    <form action="validar.php">
+                        <div class="contenido">
+                            <p class="title">Iniciar Sesión</p>
+                            <p><span>Correo Electrónico:</span><input type="email" name="user" required placeholder="Ingrese Correo"></p>
+                            <p><span>Contraseña:</span><input type="password" name="password" required placeholder="Ingrese contraseña"></p>                            
+                        </div>
+                        <input type="submit" name="loginCompleteBTN" value="Ingresar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="slider_show">
+            <div class="sl-bn">
+                <ul>
+                    <li><img src="../images/portada1.jpg"></li>
+                    <li><img src="../images/portada2.jpg"></li>
+                    <li><img src="../images/portada3.jpg"></li>
+                    <li><img src="../images/portada4.jpg"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

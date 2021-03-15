@@ -1,0 +1,342 @@
+    .container_main{
+        padding: 30px 60px;    
+    }
+        .header_main_emp .title_apar{
+            color: var(--color-azul);
+        }
+        .botones_bd .btn_add_employ{
+            background-color: var(--color-azul);
+            color: var(--color-text);
+            padding: 7px 10px;
+        }
+
+    .search_employ{
+        display: flex;
+        justify-content: flex-end;
+        line-height: 50px;
+        padding: 5px 0;
+    }
+    .search_employ .buscador>input{
+        padding: 5px 7px;
+        width: 225px;
+        border: 2px solid var(--color-azul);    
+    }
+        .search_employ .buscador>input::placeholder{
+            color: var(--color-azul);
+            text-align: center;
+        }
+    .search_employ .buscador>.input-buscador{
+        font-size: 14px;
+        width: 150px;
+        text-decoration: none;
+        color: var(--color-text);
+        background-color: var(--color-azul);
+        padding: 5px 15px;  
+        font-weight: bold;
+        border: 1.5px solid var(--color-azul);     
+        margin-left: -5px;
+    }
+
+    .data_employ{
+        padding: 10px 0;
+        overflow: auto;
+        display: flex;
+    }
+        .data_employ::-webkit-scrollbar{
+            -webkit-appearance: none;
+            height: 9px;
+        }
+        .data_employ::-webkit-scrollbar-button{
+            display: none;
+        }
+        .data_employ::-webkit-scrollbar-thumb{
+            background-color: rgba(48, 48, 48, 0.563);
+            border-radius: 20px;
+            height: 3px;
+            margin: 0;
+        }
+    .data_employ .thead, .row_emp:hover{
+        background-color: rgba(179, 184, 255, 0.3);
+        
+    }
+    .data_employ .thead, .row_emp{
+        display: flex;    
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid var(--color-azul);
+    }
+        .data_employ .tbody{
+            font-size: 13px;
+        }
+        .data_employ .thead{
+            background-color: var(--color-azul);
+            color: var(--color-text);
+            font-size: 11px;
+            padding: 5px 0;        
+        }
+        .row_emp>p{
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+            .type-emp{
+                min-width: 150px;
+                max-width: 150px;
+            }
+            .row_emp .num_id, .thead .num_id{
+                min-width: 90px;
+                max-width: 90px;            
+            }
+            .names_emp{
+                min-width: 150px;
+                max-width: 150px;
+            }
+            .date_bthd{
+                min-width: 90px;
+                max-width: 90px;
+            }
+            .mail_emp{
+                min-width: 200px;
+                max-width: 200px;
+                overflow: hidden;
+            }
+            .cell_emp{
+                min-width: 110px;
+                max-width: 110px;
+            }
+            .row_emp .botones{
+                min-width: 80px;
+                max-width: 80px;
+            }
+            .data_employ .tbody .row_emp .botones{
+                width: 125px;
+                transition: all .5s;
+            }
+            .data_employ .tbody .row_emp .botones .btn_edit_emp{
+                padding: 3px 7px;
+                background-color: var(--color-mostaza-admin);
+                border-radius: 5px;
+                color: var(--color-principal-admin);
+            }
+            .data_employ .tbody .row_emp .botones .btn_dlt_emp{
+                padding: 3px 7px;
+                background-color: #a30a0a;
+                border-radius: 5px;
+                color: var(--color-text);
+            }
+            .data_employ .tbody .row_emp .botones>a:hover{
+                font-size: 20px;
+            }
+            .btn_edit_cli, .btn_dlt_cli{
+                text-decoration: none;
+                background-color: var(--color-mostaza-admin);
+                color: var(--color-principal-admin);
+                font-weight: bold;
+                padding: 3px 10px;
+                border-radius: 5px;   
+                font-size: 13px;         
+            }
+            .btn_dlt_cli{
+                background-color: #a30a0a;
+                color: var(--color-text);
+            }
+
+
+/*
+        VENTANA DE AGREGAR UN NUEVO EMPLEADO
+*/
+.overlay_vent .window_insert{
+    background-color: var(--color-text); 
+    width: 50%; 
+}
+.window_insert .h_form{
+    background-color: var(--color-azul);
+}
+.window_insert .form_add_emp{
+    padding: 15px 30px; 
+}
+.window_insert .form_add_emp .row{
+    display: flex;
+}
+.window_insert .form_add_emp .row>.column{
+    width: 50%;
+}
+
+.form_add_emp form .row .column>input{
+    padding: 5px;
+    border: 2px solid var(--color-azul);
+    display: block;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.form_add_emp form .row .column>label{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-principal-hover);
+}
+.form_add_emp form .row .column>input::placeholder{
+    color: var(--color-principal-hover);
+}
+form .btn_accion{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+form .btn_accion>.btn_cancelar{
+    padding: 7px 30px;
+    background-color: var(--color-text);
+    color: var(--color-verde-admin);
+    border: 2px solid var(--color-verde-admin);
+}
+form .btn_accion .btn_agregar,.btn_cancelar{
+    padding: 7px 50px;
+    background-color: var(--color-verde-admin);
+    color: var(--color-text);
+    border-radius: 20px;
+    text-decoration: none;        
+}
+
+
+#botones_accionados{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px 25px 40px;
+}
+#botones_accionados>a{
+    text-decoration: none;
+    padding: 3px 30px;
+    background-color: var(--color-text);
+    color: var(--color-azul);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid var(--color-azul);
+    transition: ease all .5s;
+}
+#botones_accionados>.btn_add_employ{
+    background-color: var(--color-azul);
+    color: #ffff;
+}
+#botones_accionados>.btn_add_employ:hover{
+    letter-spacing: 2px;
+}
+#botones_accionados>.btn_volver:hover{
+    letter-spacing: 3px;
+    background-color: #ffbcbc;
+}
+
+
+/*
+        VENTANA DE EDITAR UN EMPLEADO
+*/
+.overlay_vent .window-edit-e{
+    background-color: var(--color-text); 
+    width: 50%; 
+}
+.window-edit-e .h_form{
+    background-color: #ffce00;
+    color: var(--color-principal-hover);
+}
+.window-edit-e .h_form>a{
+    color: var(--color-principal-hover);
+}
+.window-edit-e .form-edit{
+    padding: 15px 30px; 
+}
+.window-edit-e .form-edit .row{
+    display: flex;
+}
+.window-edit-e .form-edit .row>.column{
+    width: 50%;
+}
+
+.form-edit form .row .column>input{
+    padding: 5px;
+    border: 2px solid #ffce00;
+    display: block;
+    width: 250px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.form-edit form .row .column>label{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-principal-hover);
+}
+form .btn_accion{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+form .btn_accion>.btn_cancelar{
+    padding: 7px 30px;
+    background-color: var(--color-text);
+    color: var(--color-verde-admin);
+    border: 2px solid var(--color-verde-admin);
+}
+form .btn_accion .btn_agregar,.btn_cancelar{
+    padding: 7px 50px;
+    background-color: var(--color-verde-admin);
+    color: var(--color-text);
+    border-radius: 20px;
+    text-decoration: none;        
+}
+
+
+.form-edit form .editar_emp{
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px 25px 40px;
+}
+.editar_emp>a{
+    text-decoration: none;
+    padding: 3px 50px;
+    background-color: var(--color-text);
+    color: #ffce00;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 2px solid #ffce00;
+    transition: ease all .5s;
+}
+.editar_emp>.btn_save{
+    background-color: #ffce00;
+    color: var(--color-principal-hover);
+}
+.editar_emp>.btn_save:hover{
+    letter-spacing: 2px;
+}
+
+
+
+@media (max-width: 600px){
+    .search_employ .buscador>input{
+        font-size: 11px;
+        width: 190px;
+    }
+    .search_employ .buscador>.input-buscador{
+        font-size: 11.8px;
+        width: 125px;
+    }
+    .row_emp>.botones{
+        max-width: 60px;
+    }
+}
+@media (max-width: 400px){
+    .header_main .title_apar{
+        font-size: 25px;
+    }
+    .search_employ .buscador{
+        width: 100%;
+    }
+    .search_employ .buscador>input{
+        font-size: 10px;
+        padding: 5px;
+        width: 160px;
+    }
+    .search_employ .buscador>.input-buscador{
+        font-size: 10.8px;
+        width: 110px;
+        padding: 5px;
+    }
+}

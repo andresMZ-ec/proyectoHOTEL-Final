@@ -1,0 +1,48 @@
+@import url(general.css);
+@import url(menu.css);
+@import url(habitaciones.css);
+@import url(clientes.css);
+@import url(empleados.css);
+@import url(puestos-trabajo.css);
+@import url(ventaAlimentos.css);
+@import url(tipoHabitacion.css);
+@import url(productos.css);
+@import url(check_out.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --text-1: font-family: 'Asap', sans-serif;
+    --text-2: font-family: 'Lato', sans-serif;
+    --text-caja: font-family: 'Rubik', sans-serif;
+    --color-principal-admin: #1e1e1e;
+    --color-verde-admin: #147a01;
+    --color-mostaza-admin: #ffce00;
+    --color-text: #ffff;
+    --color-verde-flu: #2ad805;
+    --color-principal-hover: #444444;
+    --caja-verde-bajo: #537f49;
+
+    --edit-cliente1: #db6400;
+    --edit-cliente2: #16697a;
+}
+body{
+    font-family: 'Asap', sans-serif;
+    margin-left: 360px;
+    margin: 0;
+}
+
+select,input:focus{
+    outline: none;
+}
+
+@media (max-width: 1024px){
+    body{
+        margin-left: 0;
+    }
+    .main_admin{
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,139 @@
+.tipo_habs{
+    display: flex;
+    width: 100%;
+    padding: 30px 20px;
+}
+.btn_conf{
+    margin-top: 10px;
+}
+    .btn_conf a>i{
+        margin-right: 10px;
+    }
+    .btn_conf>a{
+        padding: 7px 15px;
+        color: var(--color-text);
+        background-color: var(--color-verde-admin);
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+    .table_hab{
+        width: 700px;  
+        margin: auto;       
+    }
+    .table_hab .tbody{
+        display: flex;
+        border-bottom: 1px solid rgba(2, 17, 49, .3);
+    }
+    .table_hab .thead{
+        display: flex;
+        background-color: rgb(2, 17, 49); 
+        color: var(--color-text);   
+    }
+    .table_hab .tbody p>a{        
+        padding: 3px 10px;
+        color: var(--color-principal-admin);
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid rgb(2, 17, 49);
+        text-decoration: none;
+    }
+        .id_hab{
+            width: 150px;
+            max-width: 150px;
+            text-align: center;
+        }
+        .name_hab{
+            min-width: 300px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .btn_oper{
+            width: 150px;
+            text-align: center;
+        }
+        .tbody .btn_oper .delete{
+            border: 2px solid #a30a0a;
+            color: #a30a0a;
+        }
+    
+/*
+    AGREGAR NUEVO TIPO DE HABITACION
+*/
+.window_add_hab{
+    background-color: var(--color-text);
+}
+.window_add_hab>.form_add{
+    padding: 30px 20px;
+}
+.window_add_hab form>input{
+    padding: 5px 10px;
+    border: 2px solid var(--color-verde-admin);
+    border-radius: 10px;
+}
+.window_add_hab form>label{
+    padding-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-principal-admin);
+}
+.window_add_hab form>.btn_agregar{
+    background-color: var(--color-verde-admin);
+    color: var(--color-text);
+    width: 100px;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+/*
+    EDITAR EL TIPO DE HABITACION
+*/
+.window_edit_hab{
+    background-color: var(--color-text);
+}
+.window_edit_hab .h_form>a{
+    color: var(--color-principal-admin);
+}
+.window_edit_hab .h_form{
+    background-color: var(--color-mostaza-admin);   
+    color: var(--color-principal-admin); 
+}
+.window_edit_hab>.form_edit{
+    padding: 20px 30px;
+}
+.window_edit_hab form .data>label{
+    color: var(--color-principal-hover);
+    padding-right: 15px;
+    font-weight: bold;
+}
+.window_edit_hab form .data>input{
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 2px solid var(--color-mostaza-admin);    
+    border-radius: 7px;
+    width: 200px;
+}
+.window_edit_hab form{
+    text-align: center;
+}
+.window_edit_hab form>label{
+    padding-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-principal-admin);
+}
+.window_edit_hab form>.btn_save{
+    background-color: var(--color-mostaza-admin);
+    color: var(--color-principal-admin);
+    width: 150px;
+    border: none;
+    justify-content: center;
+    padding: 7px 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}

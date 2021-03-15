@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.main_general{
+    padding: 20px 40px 40px 40px;
+}
+
+#head_main{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+#head_main>h1{
+    margin: 0;
+}
+
+
+.general{
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+    /*SE VEN CAMBIOS*/
+    .general .g_dtlls{
+        background-color: rgb(2, 17, 49);
+        color: #ffff;
+        padding: 7px 20px;
+        border-radius: 15px;
+        margin: auto;
+    }
+    .g_dtlls>p{
+        margin: 0;
+        font-size: 13px;
+    }
+.añadir_new_res{
+    padding: 15px 0;
+}
+.new_res{    
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+    .new_res a>i{
+        margin-right: 10px;
+    }
+    .new_res>a{
+        text-decoration: none;
+        color: var(--color-text);
+        background-color: rgba(2, 17, 49);
+        font-weight: bold;
+        font-size: 14px;
+        padding: 7px 15px;
+        transition: all .5s;
+    }
+    .btn_new_res:hover{
+        border-radius: 15px;
+        font-size: 16px;
+    }
+.form_reserva{
+    padding: 10px 20px;
+    border: 1px solid rgba(53, 53, 53);
+    box-shadow: 5px 5px 8px rgba(53, 53, 53);
+    display: none;
+}
+        .form_reserva.active{
+            display: block;
+        }
+
+
+    .form_reserva form{  
+        transition: 1s ease all;
+        transform: scale(0);
+        opacity: 0;
+    }
+        .form_reserva form.active{
+            transform: scale(1);
+            opacity: 1;
+        }
+
+
+    .fieldset_data{
+        margin-bottom: 20px;
+        display: flex;
+        padding: 20px;
+        border: 2px solid rgba(2, 17, 49, .8);
+    }
+    .fieldset_data>legend{
+        padding: 0 10px;
+        color: rgba(2, 17, 49, .8);
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .fieldset_data .column{
+        width: 50%;
+        margin-right: 40px;
+    }
+        .column .registros{
+            margin: 10px 0;
+            display: flex;
+            /*LINEA POR AGREGAR*/
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--color-principal-hover);
+        }
+
+        .registros .caja-escrit>.mensaje{
+            color: #ce0000;
+            font-size: 11px;
+            margin: 5px 0 0 10px;
+        }
+        .registros>span{
+            min-width: 200px;
+        }
+        .registros>select{         
+            margin: 0;  
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 2px solid rgb(2, 17, 49, .5);
+        }
+        .registros .caja-escrit>input{
+            width: 100%;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid rgb(2, 17, 49, .5);
+        }
+            .caja-escrit>input.error{
+                border: 2px solid #ce0000;
+            }
+
+    .fieldset_data>.reserva_input{
+        display: flex;
+        width: 50%;
+        margin: 0 40px 0 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--color-principal-hover);
+        align-items: center;
+    }
+
+.form_reserva .acciones{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+    .acciones>.send-res, .cancel-res{
+        border: none;
+        padding: 7px 10px;
+        color: rgba(2, 17, 49, .8);
+        border: 2px solid rgba(2, 17, 49, .8);
+        font-size: 14px;
+        font-weight: bold;
+        background-color: var(--color-text);
+        border-radius: 12px;
+        text-decoration: none;
+        transition: padding .5s;
+    }
+    .acciones>.send-res{
+        color: var(--color-text);
+        background-color: rgb(2, 17, 49);
+        transition: background .5s;
+    }
+        .acciones>.cancel-res:hover{
+            padding: 7px 20px;
+            color: #990000;
+            border: 2px solid #990000;
+        }
+        .acciones>.send-res:hover{
+            color: rgb(2, 17, 49);
+            background-color: var(--color-text);
+        }
+
+
+
+
+/*
+        LISTADO DE RESERVAS
+*/
+.head-detalle{
+    font-size: 20px;
+    color: rgb(2, 17, 49);
+    padding: 0 20px;
+}
+    .head-detalle>h2{
+        margin: 0;
+    }
+
+
+/*AGREGAR MAS...*/
+.dtll-lista{
+    padding: 15px 20px;
+}
+.table_res .thead_res{
+    display: flex;
+    background-color: #0f4c75;
+    color: #ffff;
+    padding: 15px;
+    text-align: center;
+}
+    .thead_res>h4{
+        margin: 0;
+        font-size: 14px;
+        opacity: 80%;
+    }
+    .table_res .tbody_res .row_res>div:not(.limit,.date_res,.hour_res){
+        padding: 10px 0;
+        height: 25px;
+        line-height: 25px;
+    }
+    .table_res .tbody_res .row_res{
+        display: flex;
+        padding: 0 15px;
+        text-align: center;
+        align-items: center;
+        background-color: #bbe1fa;
+    }
+        .table_res .tbody_res .row_res:hover{
+            background-color: rgb(255, 255, 255);
+        }
+    .table_res .tbody_res .row_res div>p{
+        margin: 0;
+    }
+    .table_res .hab_name_res{
+        min-width: 150px;
+        max-width: 150px;        
+    }
+        .hab_name_res p>span{
+            border: 2px solid rgb(2, 17, 49);
+            padding: 2px 5px;
+            border-radius: 8px;
+            margin-left: 10px;
+            color: rgb(2, 17, 49);
+            font-weight: bold;
+            font-size: 13.5px;
+        }
+    .table_res .est_reser_res{
+        min-width: 150px;
+        max-width: 150px;
+    }
+    .table_res .est_hab_res{
+        min-width: 150px;
+        max-width: 150px;
+    }
+        .est_hab_res.Disponible{
+            background-color: rgba(0, 202, 17, 0.8);
+        }
+        .est_hab_res.Ocupado{
+            background-color: rgba(192, 0, 0, 0.8);
+            color: var(--color-text);
+        }
+        .est_hab_res.Limpieza{
+            background-color: rgba(1, 129, 214, 0.8);
+        }
+        .est_hab_res.Reservado{
+            background-color: rgba(235, 113, 0, 0.8);
+        }
+    .table_res .limit{
+        min-width: 100px;
+        max-width: 100px;  
+        text-align: right;      
+    }
+    .table_res .date_res{
+        min-width: 100px;
+        max-width: 100px;
+    }
+    .table_res .hour_res{
+        min-width: 100px;
+        max-width: 100px;
+    }
+    .table_res .operacion_res{
+        width: 100%;
+    }
+        .operacion_res>a:hover{
+            padding: 3px 20px;
+        }
+        .operacion_res>a{
+            text-decoration: none;
+            background-color: #990000;
+            padding: 3px 10px;
+            color: var(--color-text);
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;    
+            transition: padding .7s;        
+        }
+        .operacion_res>.modi_res{
+            margin-left: 15px;
+            background-color: #ffbe0f;
+            color: var(--color-principal-hover);
+        }
+
+    .table_res .limit>p, .date_res>p, .hour_res>p{
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(15, 15, 15, .9);
+    }
+    
+
+
+
+/*
+    VENTANA EMERGENTE DE EDITAR RESERVA
+*/
+.form_edit_reserva form>.contenido{
+    padding: 15px 30px;
+    background-color: #ffff;
+}
+.form_edit_reserva form .registros{
+    margin-bottom: 10px;
+}
+.form_edit_reserva form .registros>span{
+    font-weight: bold;
+}
+.form_edit_reserva form .reserva_input>select{
+    min-width: 224px;
+    margin: 0;
+}
+.form_edit_reserva form .registros div>input{
+    max-width: 200px;
+}
+.form_edit_reserva form .acciones{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffbe0f;
+    padding: 10px 7px;
+}
+.form_edit_reserva form .acciones>.send-res, .cancel-res{
+    padding: 3px 5px;
+    font-size: 13px;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px){
+    .table_res .thead_res{
+        padding: 10px 5px;
+        z-index: 98;
+    }
+        .table_res .tbody_res .row_res>div:not(.limit,.date_res,.hour_res){
+            padding: 10px 0px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .table_res .tbody_res .row_res{
+            padding: 0px 5px;
+        }
+            
+        .table_res .tbody_res .row_res div>p{
+            margin: 0;
+        }
+        /*segundo nivel de tabla*/
+        .table_res .hab_name_res{
+            min-width: 150px; /*150px*/
+            max-width: 150px;
+        }
+            .hab_name_res p>span{
+                border: 2px solid #197521;
+                padding: 2px 1px;
+                border-radius: 8px;
+                margin-left: 0.5px;
+                color: #197521;
+                font-weight: bold;
+                font-size: 10px;
+                margin-left: 10px;
+            }
+    .thead_res h4{
+        font-size: 15px;      
+    }   
+    
+    .row_res div{
+        font-size: 15px;
+    }
+    .row_res div p{
+        font-size: 15px;
+    
+    }
+    .row_res div p span{
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px){
+    .header_admin{
+        width: 100%;
+    }
+    .main_general{
+        padding: 20px 25px;
+    }
+    /*GENERAL*/
+    .general{
+        justify-content: center;
+        width: 100%;
+        display: block;
+    }
+        .general .g_dtlls{
+            width: 57%;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .g_dtlls p{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+    /*LISTADO DE RESERVAS*/
+    .head-detalle{
+        padding: 0 5px;
+    }
+    .dtll-lista{
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        overflow: auto;
+        padding: 15px 10px;
+    }
+        .row_res .hab_name_res, .thead_res .hab_name_res{
+            min-width: 40px;
+            max-width: 40px;
+        }
+            .hab_name_res p>span{
+                padding: 3px 5px;
+            }
+        .row_res .est_reser_res, .thead_res .est_reser_res{
+            min-width: 110px;
+            max-width: 110px;
+        }
+        .row_res .est_hab_res, .thead_res .est_hab_res{
+            min-width: 115px;
+            max-width: 115px;
+        }
+        .row_res .limit, .thead_res .limit{
+            display: none;
+        }
+        .row_res .date_res, .thead_res .date_res{
+            text-align: end;
+        }
+        .row_res .hour_res, .thead_res .hour_res{
+            min-width: 80px;
+            max-width: 80px;
+        }
+    .hab_name_res .txt-dtll-hab{
+        display: none;
+    }
+   
+   .thead_res h4{
+       font-size: 12px;      
+   }   
+   
+   .row_res div{
+       font-size: 12px;
+   }
+   .row_res div p{
+       font-size: 12px;
+   
+   }
+   .row_res div p span{
+       font-size: 12px;
+   }
+
+
+
+   /*FORMULARIO DE RESERVA*/
+   .fieldset_data{
+       margin-top: 10px;
+       padding: 10px 15px;
+   }
+   .fieldset_data .column{
+       width: 100%;
+       margin: 0;
+   }
+        .column .registros{
+            display: block;
+        }
+        .registros>select{
+            width: 154px;
+        }
+        .registros .caja-escrit>input{
+            width: 130px;
+        }
+}

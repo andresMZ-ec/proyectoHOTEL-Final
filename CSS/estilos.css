@@ -1,0 +1,242 @@
+@import url(admin.css);
+
+
+:root {
+    --background: linear-gradient(135deg. #667eea7e 0%, #764ba298 100%);
+    --color-primary: #667eea;
+    --color-secondary: #957f20; 
+    --color-secondary-hover: #685814;
+    --boton-padding: 20px 40px; 
+    --color-blanco: #ffff;
+    --color-verde: #147a01;
+    --color-verde-hover: #0f5503;
+    --negro: #000;
+    --color-azul: rgb(2, 17, 49);;
+    --color-azul-h: rgba(12, 40, 100, 0.213);;
+}
+heaader{
+    position: -webkit-sticky;
+}
+/*HEADER PRINCIPAL*/
+header:not(.header_admin){
+    padding-bottom: 15px;
+}
+.container-header{
+    display: flex;      
+    padding: 0 60px; 
+}
+.container-header .title-container{
+    flex: 0 1 auto;
+    line-height: 50px;
+}
+.container-header .LOGO-Empresa{
+    flex: 1 1 auto;
+    justify-content: center;  
+    display: flex;
+    align-items: center; 
+}
+.container-header .botones{
+    flex: 0 1 auto;  
+    display: flex;
+    align-items: center;
+}
+.container-header .botones>a{
+    text-decoration: none;   
+    padding: 6px 30px;
+    color: #ffff;
+    font-size: 14px;
+    border-radius: 15px;
+    background-color: var(--color-verde);    
+}
+    .container-header .botones>a:hover{
+        background-color: var(--color-verde-hover);
+    }
+#new_cuenta{
+    margin-left: 20px;
+}
+
+/*NAVEGACION*/
+.nav-container{
+    display: flex;
+    justify-content: center; 
+    background-color: #957f20;
+}
+.nav__items{
+    text-decoration: none;
+    color: var(--negro);    
+    padding: 10px 30px 4px 30px;
+}
+    .nav__items.page_actual{
+        border-bottom: 6px solid var(--color-blanco);
+    }
+.nav__items:hover{
+    color: #ffff;
+    background-color: var(--color-secondary-hover);
+}
+
+/*MAIN*/
+.container-main{
+    padding: 0 80px;
+}
+.container-slider ul li>img{
+    width: 100%;
+}
+.presentacion{
+    text-align: center;
+
+}
+.presentacion_hotel2{
+    width: 350px;
+    height: 350px;
+    border-radius: 20%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+
+/* seccion campiña las fotos*/
+
+.Campiña{
+
+    background: #f2f2f2;
+}
+
+.Campiña__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "Comida Habitaciones"
+    "Comida Recepcionista";
+    gap: 10px;
+}
+
+.Campiña__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Campiña__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.Campiña__item:nth-of-type(1){
+    grid-area: Comida;
+}
+
+.Campiña__item:nth-of-type(2){
+    grid-area: Habitaciones;
+}
+
+.Campiña__item:nth-of-type(3){
+    grid-area: Recepcionista;
+}
+.Campiña__hover{
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+.Campiña__item:hover .Campiña__hover{
+    transform: translateX(0%);
+}
+
+.Campiña__icon{
+    margin: 10px;
+    font-size: 30px;
+}
+
+/* footer*/
+
+.footer{
+    background: var(--color-secondary);
+    padding: 20px 80px;
+}
+.footer-detalle{
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*contactanos*/
+.subtitle{
+    color: var(--negro);
+    font-weight: normal;
+    font-size: 27px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+.subtitle1{
+    color: var(--negro);
+    margin: 0;
+    font-size: 15px;
+}
+
+.footer-detalle .contactos .description_contactos{
+    font-size: 13px;
+    margin-top: 8px;    
+}
+
+/*creditos*/
+.container-footer__grid hr{    /*linea footer*/
+    padding: 1px;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+}
+.creditos{
+    display: flex;
+    justify-content: space-between;    
+    
+}
+.creditos .columna{
+    padding: 10px 20px;
+}
+.creditos .columna>p{
+    margin: 0;
+}
+.creditos .columna>a{
+    color: #000;
+    text-decoration: none;
+}
+.columna a>i{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.fila-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    width: 350px;
+    font-size: 13px;
+}
+.ayudanos form .fila-form>.box_text{
+    background-color: rgba(240, 231, 149, 0.8);
+    border: none;
+    width: 200px;
+    padding: 6px;
+}
+.fila-boton{
+    padding-top: 5px;
+    text-align: right;
+}
+.ayudanos form .fila-boton .send-msm{
+    background-color: var(--color-blanco);
+    border: none;    
+    padding: 3px 12px;
+}

@@ -1,0 +1,58 @@
+/*
+    VENTANA EMERGENTE DE EDITAR INFORMACION DE PUESTO DE TRABAJO
+*/
+
+.window_edit .h_form_cargo{
+    display:  flex;
+    justify-content: space-between;
+    background-color: var(--color-mostaza-admin);
+    color: var(--color-principal-admin);
+    padding: 10px 30px;
+    align-items: center;
+}
+.window_edit .h_form_cargo>a{
+    color: var(--color-principal-admin);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.window_edit .form_edit-cargo{
+    padding: 0 30px;  
+    background-color: var(--color-text);      
+}
+.form_edit-cargo form>p{
+    margin: 0;
+    padding-top: 15px;
+    color: var(--color-principal-hover);
+    font-weight: bold;
+}
+.form_edit-cargo form p>input{
+    padding: 5px;
+    border: 2px solid var(--color-mostaza-admin);
+    border-radius: 7px;
+    margin-left: 15px;
+    width: 200px;
+}
+.form_edit-cargo form .btn-edit-cmp{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-edit-cmp>a{
+    margin: auto;
+    padding: 5px 15px;
+    color: var(--color-principal-admin);
+    background-color: var(--color-mostaza-admin);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+.btn-edit-cmp .btn_cancel_edit{
+    border: 2px solid var(--color-principal-hover);
+    background-color: #ffff;
+}
+.btn-edit-cmp>a:hover{
+    letter-spacing: 2px;
+}
